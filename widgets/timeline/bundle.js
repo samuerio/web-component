@@ -71,7 +71,7 @@
 	            type: 'clock',
 	            content: '12:00'
 	        }]
-	    }), document.getElementById('todoTimelineContainer'));
+	    }), document.getElementById('timelineContainer'));
 	};
 
 /***/ },
