@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="assets/css/css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <title> Brew用法 | issUn </title>
+</head>
+<body lang="zh-Hans">
+<div class="container">
+
+    <div class="headband"></div>
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div class="content-wrap content-wrap-post ">
+                <a id="btnOpenSideBar" class="icon icon-spread"
+                   href="http://127.0.0.1:4000/2016/11/14/Brew%E7%94%A8%E6%B3%95/#"></a>
+                <div id="content" class="content">
+
+
+                    <article class="post" itemscope="" itemtype="http://schema.org/Article">
+                        <header class="post-header">
+
+                            <h1 class="post-title" itemprop="name headline">
+                                <a class="post-title-link"
+                                   href="http://127.0.0.1:4000/2016/11/14/Brew%E7%94%A8%E6%B3%95/" itemprop="url">
+                                    Brew用法
+                                </a>
+                            </h1>
+
+                            <div class="post-meta">
+                                <a href="http://127.0.0.1:4000/" class="post-meta-avatar">
+                                    <img src="./Brew用法 _ issUn_files/favicon.ico" alt="issUn">
+                                    <span>issUn</span>
+                                </a>
+                    <span class="post-meta-time">2016-11-14
+                </span></div>
+
+                        </header>
+                        <div class="post-body" itemprop="articleBody">
+
+                            <h3 id="常用指令"><a href="http://127.0.0.1:4000/2016/11/14/Brew%E7%94%A8%E6%B3%95/#常用指令"
+                                             class="headerlink" title="常用指令"></a>常用指令</h3>
+                            <ul>
+                                <li>brew update : 更新formula库，执行任何指令前最好先更新指令库</li>
+                                <li>brew install [formula]</li>
+                                <li>brew uninstall [formula]</li>
+                                <li>brew list : 查看已经安装的formula</li>
+                                <li>brew info [formula] : 查看formula信息，若已安装，则会显示相关安装信息</li>
+                                <li>brew upgrade [formula] / brew upgrade : formula的版本更新/所有已安装formula版本更新</li>
+                                <li>brew search [formula] : 搜索formula的所有版本</li>
+                            </ul>
+                            <p><em>eg:</em><br></p>
+                            <figure class="highlight plain">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class="code"><pre><span class="line">$ brew search grails
+grails                        homebrew/versions/grails20    homebrew/versions/grails22
+homebrew/versions/grails224   homebrew/versions/grails13    homebrew/versions/grails21
+homebrew/versions/grails223   homebrew/versions/grails23
+$ brew install homebrew/versions/grails223</span><br></pre>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </figure>
+                            <p></p>
+                            <h3 id="服务管理"><a href="http://127.0.0.1:4000/2016/11/14/Brew%E7%94%A8%E6%B3%95/#服务管理"
+                                             class="headerlink" title="服务管理"></a>服务管理</h3><pre><code>brew services
+                            Easily start and stop formulae via launchctl
+                            Integrates Homebrew formulae with OS X's launchctl manager. Services can be
+                            added to either /Library/LaunchDaemons or ~/Library/LaunchAgents.
+                            Basically, items in /Library/LaunchDaemons are started at boot, while those
+                            in ~/Library/LaunchAgents are started at login.
+
+                            When started with sudo, it operates on /Library/LaunchDaemons; otherwise,
+                            it operates on ~/Library/LaunchAgents.
+
+                            On start the plist file is generated and written to a Tempfile, and then
+                            copied to the launch path (existing plists are overwritten).
+
+                            [sudo] brew services list
+                            List all running services for the current user (or root)
+
+                            [sudo] brew services start formula
+                            Install and start the service formula at login (or boot).
+
+                            [sudo] brew services stop formula|--all
+                            Stop the service formula after it was launched at login (or boot).
+
+                            [sudo] brew services restart formula
+                            Stop (if necessary), install and start the service formula at login (or boot).
+
+                            [sudo] brew services cleanup
+                            Remove all unused services.
+                        </code></pre>
+                            <ul>
+                                <li>brew service list：列出所有已安装的服务</li>
+                                <li>brew service start formula：启动服务</li>
+                                <li>brew service stop formula：关闭服务</li>
+                                <li>brew service restart formula：重启服务</li>
+                                <li>brew service cleanup：移除废弃的服务</li>
+                            </ul>
+                            <h3 id="安装扩展"><a href="http://127.0.0.1:4000/2016/11/14/Brew%E7%94%A8%E6%B3%95/#安装扩展"
+                                             class="headerlink" title="安装扩展"></a>安装扩展</h3>
+                            <p><code>$ brew tap &lt;github_user/repo&gt;</code> ：安装他人扩展的brew服务<br>由于brew和包含的包源都是通过github来管理，人为的维护管理，除了自己的源还允许别人的源添加进行。
+                            </p>
+                            <p>eg.举例说明一下，Mac OS 比较歧视 PHP ，所以每次系统更新都会把常用的开发包（Ruby、Python 等）也顺带着更新到最新版本。（吐槽：Java
+                                都已经被抛弃不再默认安装了），而 brew 居然也不包含 PHP 的包，那怎么办呢？<br><code>$ brew tap
+                                    josegonzalez/php</code><br>命令完成之后，执行（当前最新是 php 5.5 版本，请根据需要替换）<br><code>$ brew
+                                    install php55</code></p>
+
+
+                        </div>
+                    </article>
+
+
+                </div>
+
+                <div class="comments" id="comments">
+
+                    <div class="ds-thread" data-thread-key="2016/11/14/Brew用法/" data-title="Brew用法"
+                         data-url="http://zhenghe39.com/2016/11/14/Brew用法/" id="ds-thread">评论框出错啦(990015):
+                        ES数据库异常,请联系客服人员
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <aside class="sidebar">
+                <div class="sidebar-inner">
+
+
+                    <ul class="sidebar-nav">
+                        <li class="active" href="#post-toc" data-toggle="tab">文章目录</li>
+                        &nbsp;&nbsp;
+                        <li href="#site-info" data-toggle="tab">站点概况</li>
+                    </ul>
+
+                    <div class="sidebar-nav-content">
+
+                        <div class="nav-panel post-toc active" id="post-toc">
+                            <div class="highlight-title" style="top: 0px; height: 24px;"></div>
+                            <ol class="nav-menu">
+                                <li class="nav-menu-item nav-menu-level-3"><a class="nav-menu-link"
+                                                                              href="http://127.0.0.1:4000/2016/11/14/Brew%E7%94%A8%E6%B3%95/#常用指令"><span
+                                        class="nav-menu-text">常用指令</span></a></li>
+                                <li class="nav-menu-item nav-menu-level-3"><a class="nav-menu-link"
+                                                                              href="http://127.0.0.1:4000/2016/11/14/Brew%E7%94%A8%E6%B3%95/#服务管理"><span
+                                        class="nav-menu-text">服务管理</span></a></li>
+                                <li class="nav-menu-item nav-menu-level-3"><a class="nav-menu-link"
+                                                                              href="http://127.0.0.1:4000/2016/11/14/Brew%E7%94%A8%E6%B3%95/#安装扩展"><span
+                                        class="nav-menu-text">安装扩展</span></a></li>
+                            </ol>
+                        </div>
+
+                        <div class="nav-panel  " id="site-info">
+                            <div class="author">
+
+                                <div class="author-img"></div>
+                                <div class="author-socialInfo">
+
+                                    <a href="https://github.com/samuerio" target="_blank" class="icon icon-github"
+                                       title="github"></a>
+
+
+                                    <a href="mailto:zhenghe39@gmail.com" target="_blank" class="icon icon-email"
+                                       title="Email Me"></a>
+
+                                </div>
+                            </div>
+
+                            <div class="categorieslist">
+                                <p class="categorieslist-title">分类</p>
+                                <ul>
+
+
+                                    <li class="categorieslist-item">
+                                        <a href="http://127.0.0.1:4000/categories/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/"
+                                           title="参考资料">参考资料</a>
+                                    </li>
+
+
+                                    <li class="categorieslist-item">
+                                        <a href="http://127.0.0.1:4000/categories/%E7%B2%BE%E9%80%89%E8%BD%AC%E8%BD%BD/"
+                                           title="精选转载">精选转载</a>
+                                    </li>
+
+
+                                    <li class="categorieslist-item">
+                                        <a href="http://127.0.0.1:4000/categories/%E7%BC%96%E7%A8%8B%E6%9C%AD%E8%AE%B0/"
+                                           title="编程札记">编程札记</a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+
+
+                            <div class="tagslist">
+                                <p class="tagslist-title">标签</p>
+                                <ul>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Javascript/"
+                                           title="Javascript">Javascript</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Css/" title="Css">Css</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Java/" title="Java">Java</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Shell/" title="Shell">Shell</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/mongodb/" title="mongodb">mongodb</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Maven/" title="Maven">Maven</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Http/" title="Http">Http</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Tool/" title="Tool">Tool</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/JSON/" title="JSON">JSON</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Node/" title="Node">Node</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Myeclipse/" title="Myeclipse">Myeclipse</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/svn/" title="svn">svn</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/JDK/" title="JDK">JDK</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Html/" title="Html">Html</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Dom/" title="Dom">Dom</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Tomcat/" title="Tomcat">Tomcat</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/SPA/" title="SPA">SPA</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/nginx/" title="nginx">nginx</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/"
+                                           title="软件设计">软件设计</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/zTree/" title="zTree">zTree</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/vi/" title="vi">vi</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Oracle/" title="Oracle">Oracle</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/%E7%BC%96%E7%A0%81/" title="编码">编码</a>
+                                    </li>
+
+
+                                    <li class="tagslist-item">
+                                        <a href="http://127.0.0.1:4000/tags/Jsp/" title="Jsp">Jsp</a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+
+        </div>
+    </main>
+</div>
+
+<script src="assets/lib/jquery-2.0.3.min.js"></script>
+<script src="../source/jquery-plugin/jquery-spyNavMenu.js"></script>
+<script>
+    var navMenu = $('.nav-menu').length && $('.nav-menu').spyNavMenu({
+        activeClass: 'active',
+        fixOffsetClass: 'post-toc-fix',//滚动过程中,当导航目录要被遮盖住时,给其加上该样式,以进行Fix固定
+        distinguishLineScale: 0,//设置为内容标题过窗口顶部,才进行激活其对应的导航目录项
+        events: {
+            'scrollNav': function (navItem, $navMenu) {
+                if (!navItem) {
+                    return;
+                }
+
+                $('.highlight-title').show();
+                $('.highlight-title').css({
+                    'top': navItem.top,
+                    'height': navItem.height + 'px'
+                });
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

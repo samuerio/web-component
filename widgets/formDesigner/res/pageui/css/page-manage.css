@@ -1,0 +1,233 @@
+.page-head{
+	line-height: 41px;
+	height: 41px;
+	background: #f4f4f4;
+	padding-left: 18px;
+}
+
+.page-bottom-border{
+	border-bottom: solid 1px rgba(200,200,200,0.6);
+}
+.approve-manage .page-bottom-border{	
+	border-top: solid 1px rgba(200,200,200,0.6);*/
+}
+.page-new, .page-edit{
+	line-height: 40px;
+	height: 40px;
+	background-color: #ffffff;
+	padding-left: 18px;
+	border-bottom: solid 1px rgba(200,200,200,0.6);
+	font-size: 14px;
+}
+
+.page-item{
+	position: relative;
+	line-height: 45px;
+	height: 45px;
+	background-color: white;
+	box-sizing: border-box;
+	border-top: solid 1px transparent;
+	border-bottom: solid 1px transparent;
+	cursor: pointer;
+}
+
+.page-item:first-child{
+	border-top: none !important;
+}
+.page-manage .page-item:last-child{
+	border-bottom: none !important;
+}
+.page-item:before{
+	content: "";
+	position: absolute;
+	width: 0px;
+	height: 100%;
+	background-color: #5db4ff;
+	-webkit-transition: width 0.4s;
+	-moz-transition: width 0.4s;
+	-ms-transition: width 0.4s;
+	-o-transition: width 0.4s;
+	transition: width 0.4s;
+}
+.page-item.selected:before{
+	width: 6px;
+}
+.page-item.selected{
+	cursor: pointer;
+	color: #0b8eff;
+	border-top: solid 1px #dcdddd;
+	border-bottom: solid 1px #dcdddd;
+}
+
+.page-item a:hover:before{	
+	color: #5db4ff;
+}
+.page-item a.sort-page{
+	background: url(../images/focus.png) center center no-repeat;
+	display: inline-block;
+	width: 6px;
+	height: 40px;
+	margin: 0 23px 0 2px;
+	vertical-align: top;
+	text-decoration: none;
+	visibility: hidden;
+}
+
+/*
+//蹇欐菠閳ユ銉傞儩寰澪垫巻锟借寘閳ユ顔毼碘檧锟藉繖閳ユ枀鐫广仮鍢庡禍位婧屼箙顬犮仮锟�.page-item:hover a.sort-page{
+	visibility: visible;
+}
+*/
+.page-item span{
+	display: inline-block;
+	width: 200px;
+	line-height: 40px;
+	height: 40px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.page-item:hover span{
+	color: #5db4ff;
+}
+.page-item a:hover{
+	color: #4b5076;
+}
+.page-item a{
+	color: #363a57;
+}
+.page-item a.edit-page{
+	display: none;
+	width: 14px;
+	height: 40px;
+	margin-left: 10px;
+	vertical-align: top;
+	text-decoration: none;
+	visibility: hidden;
+}
+.page-item a.edit-page:before{
+	display: block;
+	content: "\E630";
+	font-family: icon-font;
+	font-size: 18px;
+}
+
+.page-item:hover a.edit-page{
+	visibility: visible;
+}
+
+.page-item.rename a.edit-page{
+	display: inline-block;
+}
+
+.page-item a.del-page{
+	display: none;
+	width: 14px;
+	height: 40px;
+	margin-left: 10px;
+	vertical-align: top;
+	text-decoration: none;
+	visibility: hidden;
+}
+.page-item.deletable a.del-page{
+	display: inline-block;
+}
+
+.page-item a.del-page:before,
+.page-edit a.cancel-edit:before{
+	display: block;
+	content: "\E631";
+	font-family: icon-font;
+	font-size: 18px;
+}
+.page-item a.del-page:before{
+	content: "\E633" !important;
+}
+.page-item:hover a.del-page{
+	visibility: visible;
+}
+
+.page-edit a.confirm-edit,
+.page-edit a.cancel-edit{
+	display: inline-block;
+	width: 14px;
+	height: 40px;
+	margin-right: 12px;
+	vertical-align: top;
+	text-decoration: none;
+}
+.page-edit a.confirm-edit:before{
+	display: block;
+	content: "\E632";
+	font-family: icon-font;
+	font-size: 18px;	
+}
+.page-new input, .page-edit input{
+	width: 187px !important;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.page-foot{
+	padding: 5px 0;
+	background: #ffffff;
+}
+
+.page-head span{
+	width: 226px;
+	text-indent: 100px;
+	display: inline-block;
+}
+
+.page-head a{
+	margin-right: 10px;
+}
+
+.page-new a, .page-edit a.confirm-edit{
+	margin-right: 13px;
+}
+
+.page-manage .page{
+	padding: 10px 0;
+	background-color: #ffffff;
+	height: 25px;
+}
+
+.sidebar{
+	width: 309px;
+	background: white;
+	overflow-x: visible;
+	overflow-y: visible;
+}
+
+.page-manage .page-content,.approve-manage .page-content{
+	height: 225;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-size: 14px;
+	min-height: 40px;
+	background: #ffffff;
+}
+
+.component-cate .component-content{
+	height: 200px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.shortCut_menu li[data-role="4"]{
+    /*display:none;*/
+}
+.ui-sortable-helper{
+    opacity: .6;
+}
+
+.page-wiki{
+	float: right;
+	left: 216px;
+	z-index: 10;
+	position: absolute;
+}
+.page-wiki span{
+	color: #737373;
+	width: 24px;
+}

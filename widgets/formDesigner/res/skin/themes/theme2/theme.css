@@ -1,0 +1,6 @@
+.scroll .mod-column{padding:10px 0 15px;}
+.scroll .mod-column .mod-text p{text-indent:0; text-align:left; font-size:16px; color:#333;}
+.scroll .mod-column .mod-text p:nth-child(2){font-size:14px; color:#999; padding-top:5px;}
+.scroll .mod-column .mod-button{text-align:right; padding:3px 8px 0 0;}
+.scroll .mod-column .mod-button a{margin-right:0;}
+.scroll-wrap{bottom:45px;}

@@ -1,0 +1,131 @@
+
+<style type="text/css">
+.paytabs a {
+background: none repeat scroll 0 0 #BDC3C7;
+position: relative;
+top: 1px;
+border-color: #BDC3C7;
+border-style: solid solid none;
+border-width: 1px;
+color: #FFFFFF;
+display: block;
+float: left;
+font-size: 12px;
+font-weight: bold;
+margin: 0 4px 0 0;
+padding: 3px 7px;
+text-decoration: none;
+}
+.paytabs a.selected {
+background: none repeat scroll 0 0 #fefefe;
+color: #222222;
+cursor: default;
+}
+
+#divAli,#divWeixin {
+background: none repeat scroll 0 0 #fefefe;
+border: 1px solid #BDC3C7;
+padding:10px;
+}
+
+#divAli label,#divWeixin label{
+margin-top:5px;
+display: block;
+}
+</style>
+
+<div>
+<div class="info">
+<h2>在线支付参数设置</h2>
+<div>需要先开通支付宝商家服务或微信支付才能实现在线支付。<a target="_blank" class="link" href="http://rs.jsform.com/rs/help/formbuilder.html#t62">如何申请？</a></div>
+</div>
+
+<div id="paySettingContainer">
+
+<div id="paytabs" class="paytabs clearfix">
+<a href="#" class="selected" id="tab1">支付宝</a>
+<a href="#" id="tab2">微信支付</a>
+</div>
+
+<div id="divAli">
+<label for="aliEmail">支付宝用户名  <a class="help" href="#" title="关于支付宝用户名" rel="请转入支付宝签约商家服务时填写的用户名。">(?)</a></label>
+<input id="aliEmail" type="text" class="xxl" maxlength="64" name="ALIEMAIL" />
+<label for="aliPid">支付宝PID  <a class="help" href="#" title="关于支付宝PID" rel="登录支付宝，进入“商家服务”->“签约管理”->“查看PID|KEY”。">(?)</a></label>
+<input id="aliPid" type="text" class="xxl" maxlength="64" name="ALIPID" />
+<label for="aliKey">支付宝KEY  <a class="help" href="#" title="关于支付宝KEY" rel="登录支付宝，进入“商家服务”->“签约管理”->“查看PID|KEY”。">(?)</a></label>
+<input id="aliKey" type="text" class="xxl" maxlength="64" name="ALIKEY" />
+<label for="aliType">支付宝接口类型  <a class="help" href="#" title="关于支付宝接口类型" rel="请选择您与支付宝签约时的接口类型，请务必保持与签约时申请的接口类型一致。">(?)</a></label> 
+<select id="aliType" class="xxl" name="ALITYPE">
+<option value="">请选择</option>
+<option value="create_partner_trade_by_buyer">担保交易</option>
+<option value="create_direct_pay_by_user">即时到账</option>
+<option value="trade_create_by_buyer">双功能收款</option>
+</select>
+<label>
+<input type="checkbox" name="ALIWAP" value="1" id="aliWap"/>
+已签约手机支付宝 <a class="help" href="#" title="关于已签约手机支付宝" rel="如果已签约手机支付宝，可以勾选此项，通过手机支付时体验更好。如果没有签约手机支付宝，请不要勾选此项，以免发生错乱。">(?)</a>
+</label>
+</div>
+
+<div id="divWeixin" class="hide">
+<label for="appId">AppID(应用ID) <a class="help" href="#" title="关于应用ID" rel="公众号的唯一ID。登录微信公众平台，进入“开发者中心”->“应用ID（appid）”。">(?)</a></label>
+<input id="appId" type="text" class="xxl" maxlength="32" name="APPID" />
+<label for="appSecret">AppSecret(应用密钥) <a class="help" href="#" title="关于应用密钥" rel="与应用ID对应的密钥。登录微信公众平台，进入“开发者中心”->“应用秘钥（AppSecret）”">(?)</a></label>
+<input id="appSecret" type="text" class="xxl" maxlength="64" name="APPSECRET" />
+<!-- 
+<label for="bizName">商户名称 <a class="help" href="#" title="关于商户名称" rel="申请微信支付时填写的商户名称。登录微信公众平台，进入“微信支付”->“商户信息”->“商户名称”">(?)</a></label>
+<input id="bizName" type="text" class="xxl" maxlength="32" name="BIZNAME" />
+ -->
+<label for="bizNo">微信支付商户号 <a class="help" href="#" title="关于微信支付商户号" rel="微信支付申请成功后被分配的商户号。登录微信商户平台，进入“账户设置”->“账户信息”->“微信支付商户号”。">(?)</a></label>
+<input id="bizNo" type="text" class="xxl" maxlength="32" name="BIZNO" />
+<label for="bizSecret">商户支付密钥(API密钥) <a class="help" href="#" title="关于商户支付密钥" rel="微信支付时所需要的密钥（不是公众平台的密钥）。登录微信商户平台，进入“账户设置”->“安全设置”->“API安全”->“API密钥”设置和查看”。">(?)</a></label>
+<input id="bizSecret" type="text" class="xxl" maxlength="64" name="BIZSECRET" />
+
+<div class="buyInfo" style="margin-top:5px;clear:both;">
+注意：还需要在公众号中进行 <a target="_blank" href="http://rs.jsform.com/rs/help/formbuilder.html#t64">其它设置</a> 才能正常使用。
+</div>
+</div>
+
+</div>
+
+<div class="bulkButton">
+<a href="#" title="保存群组信息" class="btn left btn-blue icon-confirm" id="btnConfirm"><b></b>保存</a>
+<a href="#" title="取消" class="btn  btn-red bg-def left icon-cancel" id="btnCancel"><b></b>取消</a>
+</div>
+<div class="clear noheight"></div>
+
+</div>
+
+<script type="text/javascript">
+function savePaySetting(){
+	var ali=$("#divAli").getValues(),weixin=$("#divWeixin").getValues();
+	$.showStatus("正在保存设置...")
+	$.postJSON("savepaysetting",{ID:M._id,ALI:ali,WX:weixin},function(){
+		$.hideStatus();
+	});
+}
+
+function loadPaySetting(){
+	$.showStatus("正在加载...");
+	$.postJSON("loadpaysetting",{ID:M._id},function(setting){
+		$("#divAli").setValues(setting.ALI || {},true);
+		$("#divWeixin").setValues(setting.WX || {},true);
+		$.hideStatus();
+	});
+}
+$("#paytabs").find("a").click(function(){
+	var divs=["divAli","divWeixin"],idx=$(this).index();
+	$("#paytabs").find("a.selected").removeClass("selected");
+	$(this).addClass("selected");
+
+	$.each(divs,function(i,div){
+		if(i==idx){
+			$("#"+div).removeClass("hide");
+		}else{
+			$("#"+div).addClass("hide");
+		}
+	});
+});
+
+$("#paySettingContainer").find("a.help").helpTip();
+</script>

@@ -1,0 +1,143 @@
+@charset "utf-8";
+/*弹出确认框*/
+.mask{
+	z-index: 990;
+	position: fixed !important;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5) !important;
+}
+.pop-box{
+	position: absolute;
+	padding: 14px;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	width: 430px;
+	box-sizing: border-box;
+	text-align: center;
+	background: white;
+	border: solid 1px rgba(0,0,0,.15);
+	border-radius: 8px;
+}
+.pop-box .info-text{
+	margin: 40px auto;
+	line-height: 40px;
+	color: #4b5076;
+	font-size: 18px;
+}
+.pop-box .buttons{
+	position: relative;
+	box-sizing: border-box;
+	padding-top: 20px;
+	border-top: dashed 1px #c9c9c9;
+	height: 76px;
+}
+.pop-box .buttons:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.pop-box .buttons .button{
+	float: left;
+	width: 160px;
+	height: 50px;
+	margin-left: 30px;
+	line-height: 50px;
+	text-align: center;
+	color: #333;
+	background: white;
+	border: solid 1px #c9c9c9;
+	border-radius: 4px;
+	cursor: pointer;
+	-webkit-transition: background-color .3s,border-color .3s,color .3s;
+	-moz-transition: background-color .3s,border-color .3s,color .3s;
+	-ms-transition: background-color .3s,border-color .3s,color .3s;
+	transition: background-color .3s,border-color .3s,color .3s;
+}
+.pop-box .buttons .button:first-child{
+	margin-left: 25px;
+	background: #55a2e6;
+	border-color: #55a2e6;
+	color: white;
+}
+.pop-box .buttons .button:hover{
+	color: #55a2e6;
+	border-color: #55a2e6;
+}
+.pop-box .buttons .button:first-child:hover{
+	background: #2d90e8;
+	border-color: #2d90e8;
+	color: white;
+}
+.buttons .button~.tip {
+	float: left;
+	position: absolute;
+	max-width: 300px;
+	height: 40px;
+	left: 220px;
+	top: 45px;
+	font-size: 12px;
+	line-height: 40px;
+	padding: 0 30px;
+	background: #fdf9e3;
+	color: #8b6c3a;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	border: solid 1px #fbebcd;
+	border-radius: 6px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.mask .pop-box.save-tip{
+	padding: 0;
+}
+.mask .pop-box.save-tip p{
+	padding: 20px 0;
+	text-align: center;
+	font-size: 16px;
+	color: #666;
+	line-height: 20px;
+}
+.mask .pop-box.save-tip .buttons{
+	border-top: none;
+}
+.mask .pop-box.save-tip .buttons .button{
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.mask .pop-box.save-tip .buttons .button:first-child{
+	margin-left: 70px;
+}
+.pop-box .close-btn{
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	line-height: 24px;
+	color: #b8b8b8;
+	cursor: pointer;
+}
+.pop-box .close-btn:hover{
+	color: #5db4ff;
+}
+.pop-box .close-btn:before{
+	content: "\E693";
+	font-family: icon-font;
+}
+.pop-box .box-body {
+    padding: 14px;
+}
+/*弹出确认框 end*/

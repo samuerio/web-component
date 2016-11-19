@@ -1,0 +1,557 @@
+@charset "utf-8";
+body,html{
+	background: #f3f7fa;
+}
+.hide {
+	display: none;
+}
+.disn{
+	display: none;
+}
+.focused>.hide{
+	display: block !important;
+}
+.clear{
+	clear: both;
+}
+.float-wrapper:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.content#container{
+	position: relative;
+	width: 100%;
+	background: none;
+	border: none;
+}
+#left{
+	z-index: 50;
+	position: absolute;
+	width: 310px;
+	height: 100%;
+	background: white;
+	overflow: visible;
+}
+#left .sub-header{
+	height: 44px;
+	line-height: 44px;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	background: #4b5076;
+}
+#addFields>h3{
+	display: block;
+	padding: 0 !important;
+	margin: 20px 0 20px 0;
+	color: #4b5076;
+	font-size: 14px !important;
+	line-height: 1em;
+	clear: both;
+	overflow: hidden;
+}
+#addFields>h3#fancy:before{
+	content: "";
+	display: block;
+	width: auto;
+	margin: 20px auto;
+	height: 0;
+	border-top: dashed 1px #c9c9c9;
+}
+#left .dott-line{
+	width: auto;
+	margin: 20px;
+	height: 0;
+	border-top: dashed 1px #c9c9c9;
+}
+#left>ul{
+	margin-left: 20px;
+	list-style: none;
+}
+#left>ul:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+#addFields>ul li{
+	margin: 0 9px 7px 0 ;
+	padding: 0 12px;
+	box-sizing: border-box;
+	width: 130px;
+	height: 30px;
+	line-height: 30px;
+	color: #333;
+	font-size: 12px;
+	background: #f4f4f4;
+	border: solid 1px #dcdddd;
+	cursor: pointer;
+	-webkit-transition: background-color 0.3s,color 0.1s,border-color 0.3s;
+	-moz-transition: background-color 0.3s,color 0.1,border-color 0.3s;
+	-ms-transition: background-color 0.3s,color 0.1,border-color 0.3s;
+	transition: background-color 0.3s,color 0.1s,border-color 0.3s;
+}
+#addFields>ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: inherit;
+	text-decoration: none;
+	line-height: 28px;
+	padding: 0 !important;
+	margin: 0 !important;
+	background: none !important;
+}
+#addFields>ul li a b{
+	display: none;
+}
+#addFields>ul li:hover,
+#addFields>ul li.selected{
+	background: #4b5076;
+	color: white;
+	border-color: #4b5076;
+}
+#addFields>ul li a:before{
+	display: inline;
+	font-family: icon-font;
+	margin-right: 5px;
+	color: #898dae;
+	font-size: 18px;
+	vertical-align: -3px;
+}
+#addFields>ul li:hover a:before,
+#addFields>ul li.selected a:before{	
+	color: white;
+}
+/*图标配置*/
+#initiator:before{
+	content: "\E6D2";
+}
+#options:before{
+	content: "\E6D3";
+}
+#date:before{
+	content: "\E6D5";
+}
+#money:before{
+	content: "\E6D4";
+}
+#ddate:before{
+	content: "\E6DD";
+}
+#address:before{
+	content: "\E6DE";
+}
+#file:before{
+	content: "\E6DF";
+}
+#depts:before{
+	content: "\E6E0";
+}
+#users:before{
+	content: "\E6E1";
+}
+#label:before{
+	content: "\E6E2";
+}
+#number:before{
+	content: "\E6E7";
+}
+#text:before{
+	content: "\E6E8";
+}
+#textarea:before{
+	content: "\E6E9";
+}
+#radio:before{
+	content: "\E6EA";
+}
+#checkbox:before{
+	content: "\E6EB";
+}
+#dropdown:before{
+	content: "\E6EC";
+}
+#checkbox:before{
+	content: "\E6EB";
+}
+#separator:before{
+	content: "\E6ED";
+}
+#image:before{
+	content: "\E6EE";
+}
+#detailTable:before{
+	content: "\E6EF";
+}
+#name:before{
+	content: "\E6FE";
+}
+#email:before{
+	content: "\E601";
+}
+#phone:before{
+	content: "\E614";
+}
+#url:before{
+	content: "\E701";
+}
+#image_upload:before{
+	content: "\E6F4";
+}
+/*图标配置end*/
+
+/*左侧内容 end*/
+/*右侧内容*/
+#right{
+	width: auto;
+	margin-left: 310px;
+	float: none;
+	padding: 0;
+}
+#right:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+#right .right-top-bar{
+	height: 44px;
+	padding: 0;
+	box-sizing: border-box;
+	border-bottom: solid 1px #c9c9c9;
+	background: #fafafa;
+	line-height: 44px;
+}
+#right .right-top-bar .page-pub-ctr{
+	height: 44px;
+	line-height: 44px;
+}
+#right .right-top-bar .paste:after{
+	content: none;
+}
+#right .right-top-bar .page-pub-ctr .btn-con{
+	padding: 0;
+	text-align: left;
+	padding-left: 40px;
+}
+#right .right-top-bar .page-pub-ctr .btn-con .button{
+	float: right;
+	margin: 6px 18px 0 0;
+	padding: 0 20px;
+	font-size: 14px;
+	color: white;
+	line-height: 30px;
+	background: #55a2e6;
+	border: none;
+	-webkit-transition: background-color 0.3s ,color 0.3s;
+	-moz-transition: background-color 0.3s ,color 0.3s;
+	-ms-transition: background-color 0.3s ,color 0.3s;
+	transition: background-color 0.3s ,color 0.3s;
+}
+#right .right-top-bar .page-pub-ctr .btn-con .button:active{
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+#right .right-top-bar .page-pub-ctr .btn-con .button.save{
+	background-color: #55a2e6;
+}
+#right .right-top-bar .page-pub-ctr .btn-con .button.setting{
+	background-color: #6a81b6;
+}
+#right .right-top-bar .page-pub-ctr .btn-con .button.save:active{
+	background-color: #298ae0;
+}
+#right .right-top-bar .page-pub-ctr .btn-con .button.setting:active{
+	background-color: #4b5076;
+}
+#right .phone{
+	background: none;
+}
+
+
+/*右侧内容 end*/
+
+/*单选框重设样式*/
+.form-cell input[type=checkbox]+label,.form-cell input[type=radio]+label{
+	float: none;
+}
+
+
+input[type=radio],input[type=checkbox]{
+	display: none;
+}
+input[type=radio]:checked+label:before,
+input[type=radio]:checked:active+label:before{
+	background: #5db4ff !important;
+}
+input[type=checkbox]:checked+label:before,
+input[type=checkbox]:checked:hover+label:before{
+	content: "\E632";
+	color: white;
+	background: #5db4ff;
+	box-shadow: 0 0 3px #5db4ff;
+}
+input[type=radio]+label,input[type=checkbox]+label{
+	position: relative;
+	font-size: 14px;
+}
+input[type=radio]+label{
+	display: block;
+}
+input[type=radio]+label:hover:before{
+	border-color: white;
+}
+input[type=radio]+label:hover:active:before{
+	background: #f3f7fa;
+}
+input[type=checkbox]+label:hover:before{
+	background: white;
+	box-shadow: 0 0 1px #333;
+}
+input[type=radio]+label:before,
+input[type=checkbox]+label:before{
+	content: "";
+	display: inline-block;
+	margin-right: 5px;
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+	text-align: center;
+	box-sizing: border-box;
+	background: #f3f7fa;
+	border: solid 3px #f3f7fa;
+	border-radius: 50%;
+	vertical-align: -3px;
+	box-shadow: 0 0 1px #666;
+	overflow: hidden;
+}
+input[type=checkbox]+label:before{
+	font-family: icon-font;
+	border-radius: 3px;
+	border: none;
+	font-size: 12px;
+}
+
+/*单选框重设样式 end*/
+
+/*按钮样式*/
+.btn {
+	position: relative;
+	display: inline-block;
+	color: #fff;
+	border-radius: 3px;
+	background-color: #5db4ff;
+	padding: 4px 12px 4px 32px;
+	margin: 0 5px 3px 3px;
+	line-height: 150%;
+	cursor: pointer;
+}
+.btn:hover{
+	color: #fff;
+	background-color: #55a2e6;
+	margin: 0 5px 3px 3px;
+	line-height: 150%;
+	cursor: pointer;
+	text-decoration: none;
+}
+/*按钮样式 end*/
+
+/*编辑内容*/
+#right1{
+	float: left;
+}
+#right1 #fieldProperties{
+	width: 470px;
+	padding: 0;
+	margin-top: 20px;
+	margin-left: 40px;
+	overflow: visible;
+	border: none;
+	box-shadow: none;
+	border-radius: 10px;
+	border: solid 1px #e2e6e8;
+	overflow: hidden;
+	background: white;
+}
+#right1 .tab-nav {
+	margin: 0;
+	padding: 0;
+	height: 48px;
+	border-bottom: solid 1px #e2e6e8;
+	background: white;
+}
+#right1 .tab-nav li {
+	position: relative;
+	list-style: none;
+	vertical-align: top;
+	display: inline-block;
+	vertical-align: middle;
+	color: #333;
+	width: 80px;
+	margin: 0 20px;
+}
+#right1 .tab-nav li a {
+	color: inherit;
+	font-size: 16px;
+	height: 47px;
+	line-height: 47px;
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+}
+#right1 .tab-nav li:first-child {
+	border-radius: 5px 0 0 0;
+	border-left: none;
+}
+#right1 .tab-nav li.cur {
+	color: #4b5076;
+}
+#right1 .tab-nav li.cur a {
+	color: #4b5076;
+	border-bottom: solid 3px #5db4ff;
+}
+#right1 #allProps{
+	padding: 15px;
+}
+
+#right1 #allProps li fieldset{
+	line-height: 30px;
+}
+#right1 #allProps li fieldset .form-cell{
+	display: inline-block;
+}
+#right1 #allProps li fieldset select{
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	border: solid 1px #c9c9c9;
+}
+#right1 #allProps li fieldset .form-cell.city-select{
+	width: 320px;
+}
+#right1 #allProps li fieldset .form-cell.city-select textarea{
+	margin-top: 10px;
+	width: 303px;
+	min-width: 303px;
+	max-width: 303px;
+}
+#right1 #allProps li fieldset .form-cell.city-select select{
+	width: 95px;
+	margin-right: 8px;
+	padding: 0;
+	box-sizing: border-box;
+}
+#right1 #allProps li fieldset .float-wrapper{
+	width: auto;
+	margin-left: 110px;
+}
+#right1 #allProps li fieldset .half label{
+	display: inline;	
+	margin-right: 5px;
+}
+#right1 #allProps li fieldset .half input[type=text]{
+	width: 70px;
+	max-width: 70px;
+	min-width: 70px;
+}
+#right1 #allProps li fieldset>label:first-child,
+#right1 #allProps li form>label:first-child{
+	display: inline;
+	float: left;
+	margin-right: 15px;
+	padding: 0;
+	width: 100px;
+	text-align: right;
+	font-size: 14px;
+	color: #333;
+	font-weight: normal;
+	white-space: nowrap;
+}
+#right1 #allProps li .left-text{
+	margin-left: ;
+}
+#right1 #allProps li fieldset>input[type=text],
+#right1 #allProps li fieldset>input[type=password]{
+	width: 291px;
+	background-color: white;
+	border: 1px solid #c9c9c9;
+	border-radius: 4px;
+}
+#right1 #allProps li fieldset>input[type=text]:hover,
+#right1 #allProps li fieldset>input[type=password]:hover{
+	border-color: #55a2e6;
+}
+#right1 #allProps li fieldset>input[type=button]:hover{
+	
+}
+#right1 #allProps li{
+	margin-bottom: 15px;
+}
+
+/*事项的内容*/
+
+#itemList{
+	width: auto;
+	margin-left: 115px;
+}
+#itemList li{
+	width: 300px;
+}
+#itemList li input[type=text]{
+	max-width: 200px;
+	min-width: 200px;
+}
+#itemList li input[type=checkbox]+label,#itemList li input[type=radio]+label{
+	display: inline-block;
+}
+#itemList li input[type=checkbox]+label:before,#itemList li input[type=radio]+label:before{
+}
+.icononly-add, .icononly-del{
+	display: inline;
+	position: relative;
+	margin: 7px 0 0 10px;
+	font-family: icon-font;
+	font-size: 14px;
+	background: none;
+	text-decoration: none;
+}
+.icononly-add:hover,.icononly-del:hover{
+	color: #5db4ff;	
+	text-decoration: none;
+}
+.icononly-del{
+	margin: 7px 0 0 10px;
+}
+.icononly-add:before{
+	content: "\E629";
+}
+.icononly-del:before{
+	content: "\E633";
+}
+/*事项的内容 end*/
+/*隐藏标题数字*/
+#right1 .num{
+	display: none;
+}
+.fields{
+	padding: 0;
+}
+.line {
+    background: #ffe5cd !important;
+    border: dashed 1px #cc6941;
+    text-align: center;
+    color: #ee6979;
+}
+.line:before{
+	content: "放到这里";
+	line-height: 42px;
+}
+.desc{
+	padding: 0;
+}
+/*编辑内容 end*/

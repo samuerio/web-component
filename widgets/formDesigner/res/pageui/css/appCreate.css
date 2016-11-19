@@ -1,0 +1,305 @@
+@charset "utf-8";
+body {
+	position: relative;
+	min-width: 1100px;
+	min-height: 720px;
+}
+.hide {
+	display: none;
+}
+.clear{
+	clear: both;
+}
+.content {
+	margin: 28px auto;
+	width: 1000px;
+	border: solid 1px #e2e6e8;
+	border-radius: 8px;
+	background: white;
+}
+.sub-header {
+	height: 60px;
+	border-bottom: solid 1px #cfd2d5;
+}
+.sub-header span {
+	display: block;
+	float: left;
+	padding: 0 10px;
+	margin-left: 20px;
+	line-height: 59px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	color: #4b5076;
+	border-bottom: solid 3px #5db4ff;
+	text-shadow: 0 0 0.1px #4b5076;
+}
+.content .wrapper {
+	padding: 20px;
+}
+.content .wrapper:after{
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	clear: both;
+}
+.app-info{
+	float: left;
+	box-sizing: border-box;
+	padding: 0 14px 60px;
+	width: 382px;
+	background: #f7f8fa;
+	border-radius: 5px;
+	overflow: hidden;
+	/*height: 100%;*/
+}
+.app-info .app-logo img{
+	display: block;
+	margin: 58px auto 40px;
+	width: 110px;
+	height: 110px;
+}
+.app-info .app-logo h3{
+	margin: 0 auto 45px;
+	font-size: 20px;
+	line-height: 1em;
+	color: #4b5076;
+	text-align: center;
+}
+.app-info .dott-line{
+	margin-bottom: 40px;
+}
+.dott-line{
+	width: 100%;
+	height: 0;
+	border-top: dashed 1px #c9c9c9;
+}
+.app-info h4{
+	margin-bottom: 15px;
+	font-size: 14px;
+	color: #333;
+	line-height: 1em;
+	text-indent: 20px;
+}
+.app-info table{
+	margin: auto;
+	width: 320px;
+	font-size: 14px;
+	background: white;
+	border: solid 1px #c2c2c2;
+	border-collapse: collapse;
+}
+.app-info table th,
+.app-info table td{
+	font-size: 16px;
+	color: #666;
+	padding: 15px;
+	font-size: 14px;
+	white-space: normal;
+	word-break: break-all;
+	border: solid 1px #c2c2c2;
+}
+.app-info table th{
+	text-align: right;
+	vertical-align: middle;
+	word-break: normal;
+	padding-left: 10px;
+	min-width: 85px;
+}
+.app-config{
+	float: left;
+	margin-left: 40px;
+	width: 520px;
+}
+.app-config>span,
+.app-config .tab-content>span{
+	float: left;
+	margin-right: 25px;
+	width: 100px;
+	text-align: right;
+	font-size: 14px;
+	color: #333;
+	line-height: 40px;
+}
+.app-config .tab{
+	float: left;
+}
+.app-config .tab:after{
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	clear: both;
+}
+.app-config .tab .tab-item{
+	float: left;
+	z-index: 1;
+	position: relative;
+	margin-right: -1px;
+	box-sizing: border-box;
+	width: 155px;
+	height: 40px;
+	font-size: 14px;
+	line-height: 38px;
+	text-align: center;
+	border: solid 1px #c9c9c9;
+	background: #f9f9f9;
+}
+.app-config .tab .tab-item.selected{
+	z-index: 4;
+	background: white;
+	border-color: #5db4ff;
+}
+.app-config .tab-content{
+	margin-top: 25px;
+}
+.app-config .client{
+	float: left;
+}
+.app-config .client-item{
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.app-config .client-item .app-type{
+	cursor: pointer;
+}
+.app-config .client-item .app-type,
+.app-config .client-item .app-version{
+	position: relative;
+	width: auto;
+	margin-left: 80px;
+	line-height: 40px;
+	color: #333;
+}
+.app-config .client-item .app-type:before{
+	position: absolute;
+	left: -45px;
+	font-family: icon-font;
+	font-size: 40px;
+	color: #555;
+}
+.app-config .client-item .app-type>span{
+	margin-left: 5px;
+    color: #858585;
+    font-size: 12px;
+    white-space: nowrap;
+}
+.app-config .client-item .checkbox.checked~.app-type,
+.app-config .client-item .checkbox.checked~.app-type:before{
+	color: #5db4ff;
+}
+.app-config .client-item.android .app-type:before{
+	content: "\E699";
+}
+.app-config .client-item.ios .app-type:before{
+	content: "\E69a";
+}
+.app-config .client-item .app-version input[type=text]{
+	margin: 0 3px;
+	width: 30px;
+	height: 26px;
+	background: white;
+	border: solid 1px #ddd;
+	border-radius: 2px;
+	text-align: center;
+	vertical-align: 5px;
+}
+.app-config .client-item .tip{
+	margin-left: 80px;
+	color: #858585;
+	font-size: 12px;
+	line-height: 28px;
+	white-space: nowrap;
+}
+.app-config .tab-content textarea{
+	box-sizing: border-box;
+	padding: 10px;
+	width: 316px;
+	height: 170px;
+	background: white;
+	border: solid 1px #c9c9c9;
+	color: #666;
+	line-height: 1.4em;
+	resize: none;
+}
+.bottom-button{
+	position: relative;
+	margin-top: 40px;
+	border-top: dashed 1px #c9c9c9;
+}
+.bottom-button .button{
+	margin: 24px auto 15px;
+	width: 187px;
+	height: 48px;
+	background: #61a5e9;
+	text-align: center;
+	line-height: 48px;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.bottom-button .button~.tip{
+	float: left;
+	position: absolute;
+	max-width: 300px;
+	height: 40px;
+	left: 290px;
+	top: 45px;
+	font-size: 12px;
+	line-height: 40px;
+	padding: 0 30px;
+	background: #fdf9e3;
+	color: #8b6c3a;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	border: solid 1px #fbebcd;
+	border-radius: 6px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
+.bottom-button .button:hover{
+	background: #2587e8;
+}
+.app-config .checkbox{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.checkbox{
+	margin: 8px 0 0 0;
+	box-sizing: border-box;
+	width: 24px;
+	height: 24px;
+	border: solid 1px #ddd;
+	background: #f3f7fa;
+	font-size: 18px;
+	line-height: 1em;
+	padding: 3px;
+	font-family: icon;
+	text-align: center;
+	border-radius: 3px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+.checkbox:hover{
+	box-shadow: 0 0 10px #ddd;
+}
+.checkbox.checked:hover{
+	box-shadow: 0 0 10px #5db4ff;
+}
+.checkbox.checked{
+	background-color: #5db4ff;
+	border-color: #5db4ff;;
+}
+.checkbox.checked:before{
+	content: "\E632";
+	font-family: icon-font;
+	color: white;
+}

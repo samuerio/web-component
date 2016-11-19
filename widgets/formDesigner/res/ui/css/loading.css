@@ -1,0 +1,74 @@
+@charset "utf-8";
+/*弹出loading*/
+.loading-mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 99999;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.6);
+}
+.loading-mask svg{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+.loading-mask .circle {
+	stroke: rgba(255,255,255,.8);
+	stroke-width: 6;
+	fill: none;
+	stroke-dasharray: 85 200;
+}
+.loading-mask .circle {
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-animation: scroll 1s infinite linear;
+	-moz-animation: scroll 1s infinite linear;
+	-ms-animation: scroll 1s infinite linear;
+	animation: scroll 1s infinite linear;
+}
+.loading-mask .circle-bg {
+	stroke: rgba(255,255,255,.2);
+	stroke-width: 6;
+	fill: none;
+}
+@-webkit-keyframes scroll{
+	form{
+		-webkit-transform: rotateZ(0deg);
+	}
+	to{
+		-webkit-transform: rotateZ(360deg);		
+	}
+}
+@-moz-keyframes scroll{
+	form{
+		-moz-transform: rotateZ(0deg);
+	}
+	to{
+		-moz-transform: rotateZ(360deg);		
+	}
+}
+@-ms-keyframes scroll{
+	form{
+		-ms-transform: rotateZ(0deg);
+	}
+	to{
+		-ms-transform: rotateZ(360deg);		
+	}
+}
+@keyframes scroll{
+	form{
+		transform: rotateZ(0deg);
+	}
+	to{
+		transform: rotateZ(360deg);		
+	}
+}
+/*弹出loading end*/
